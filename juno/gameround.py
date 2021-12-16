@@ -29,8 +29,8 @@ class GameRound():
                 self.players.remove(player)
                 
     def _deal_community_cards(self,number):
-        community_cards=self.deck.remove_cards(number)
         for player in self.players:
+            community_cards=self.deck.remove_cards(number)
             player.add_cards(community_cards)
                 
     def _deal_flop_cards(self):
